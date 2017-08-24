@@ -1,0 +1,28 @@
+<div class="popup_bg">
+	<ion-modal-view>
+		<div class="picker_bgclose" ng-click="pk.clickToClose()" ></div>
+		<div class="picker_pop">
+			<header class=" bar picker_header" ng-class="pk.barCssClass">
+				<div class="buttons">
+					<button class="button button-clear button-positive" ng-click="pk.returnCancel()">取消</button>
+				</div>
+				<h1 class="title">{{title}}</h1>
+				<div class="buttons">
+					<button class="button button-clear button-positive" ng-click="pk.returnOk()">{{pk.buttonText}}</button>
+				</div>
+			</header>
+			<div class="picker_content">
+				<ion-scroll delegate-handle="{{pk.listHandler}}" on-scroll-complete="pk.getValue()" scrollbar-y=false overflow-scroll=false>
+					<ul>
+						<li ng-repeat="item in pk.list">{{item.name}}</li>
+					</ul>
+				</ion-scroll>
+				
+				<div class="picker_center_highlight">
+				</div>
+			</div>
+			
+		</div>
+		
+	</ion-modal-view>
+</div>

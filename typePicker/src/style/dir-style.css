@@ -1,0 +1,318 @@
+.popup_bg {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	-webkit-transition: 0.1s opacity linear;
+	transition: 0.1s opacity linear;
+}
+
+.popup_bg>ion-modal-view {
+	background: transparent;
+}
+
+.popup_bg>ion-modal-view>div {
+	z-index: 2;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
+
+
+
+/* picker begin*/
+.picker_bgclose {
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	position: absolute;
+}
+
+.picker_pop {
+	z-index: 3;
+	position: absolute;
+	background: #eee;
+	width: 100%;
+	height: 296px;
+	bottom: 0;
+}
+
+.picker_pop .picker_header {
+	position: absolute;
+	height: 44px;
+	width: 100%;
+}
+
+.picker_pop .picker_header .button {
+	font-size: 18px;
+}
+
+.picker_pop .picker_content {
+	top: 44px;
+	height: 252px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	padding: 0;
+	font-size: 0.14rem;
+	text-align: right;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.picker_pop .ionic-scroll {
+	height: 252px;
+	width: 100%;
+	text-align: center;
+}
+
+.picker_pop .ionic-scroll .scroll {
+	padding: 108px 0;
+}
+
+.picker_pop .ionic-scroll li {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 36px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 10px;
+	overflow: hidden;
+	line-height: 36px;
+	color: #000;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+}
+
+.picker_pop .picker_center_highlight {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: 0px;
+	pointer-events: none;
+}
+
+.picker_pop .picker_center_highlight:before {
+	height: 100%;
+	margin: 0 auto;
+	z-index: 3;
+	background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .95),
+		hsla(0, 0%, 100%, .6)),
+		-webkit-linear-gradient(bottom, hsla(0, 0%, 100%, .95),
+		hsla(0, 0%, 100%, .6));
+	background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .95),
+		hsla(0, 0%, 100%, .6)), linear-gradient(0deg, hsla(0, 0%, 100%, .95),
+		hsla(0, 0%, 100%, .6));
+	background-position: top, bottom;
+	background-size: 100% 108px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 100%;
+}
+
+.picker_pop .picker_center_highlight:after {
+	content: '';
+	width: 100%;
+	height: 36px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -18px;
+	z-index: 3;
+	background-image: -webkit-linear-gradient(top, #d0d0d0, #d0d0d0, transparent, transparent),
+		-webkit-linear-gradient(bottom, #d0d0d0, #d0d0d0, transparent,
+		transparent);
+	background-image: linear-gradient(180deg, #d0d0d0, #d0d0d0, transparent, transparent),
+		linear-gradient(0deg, #d0d0d0, #d0d0d0, transparent, transparent);
+	background-position: top, bottom;
+	background-size: 100% 1px;
+	background-repeat: no-repeat;
+}
+
+.picker_pop .row, .picker_pop  .col {
+	padding: 0;
+}
+
+.single_picker {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+}
+
+.single_picker>label {
+	/*padding-left: 4px;*/
+	width:265.27px;
+	line-height: 44px;
+	font-size: 0.14rem !important;
+	display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.single_picker>span {
+	line-height: 0.44rem;
+	font-size: 0.13rem;
+	text-align: right;
+}
+
+.single_picker>span.arrow_menu {
+	background: url(../img/widget/icon_down.png) no-repeat right center;
+	background-size: 0.14rem auto;
+}
+
+.single_picker>span.arrow_down {
+	background: url(../img/main/home_jt.png) no-repeat right center;
+	background-size: 0.14rem auto;
+}
+/* picker end*/
+
+/* custom popup begin*/
+.custom_popup {
+	
+}
+
+.custom_popup .popup {
+	border-radius: 6px !important;
+	width: 280px;
+	max-width: 75%;
+}
+
+.custom_popup .popup-head {
+	display: none;
+}
+
+.custom_popup .popup-body {
+	background: #fff;
+	border-top-left-radius: 6px !important;
+	border-top-right-radius: 6px !important;
+	padding: 0.3rem !important;
+	font-size: 0.16rem;
+	text-align: center;
+}
+
+.custom_popup .popup-buttons {
+	padding: 0px !important;
+	min-height: 0px !important;
+	border-top: 1px solid #e4e4e4;
+}
+
+.custom_popup .popup-buttons .button {
+	border-radius: 0px !important;
+	margin-right: 0px !important;
+	border-right: 1px solid #e4e4e4;
+}
+
+.custom_popup .popup-buttons .button:first-child {
+	border-bottom-left-radius: 6px !important;
+}
+
+.custom_popup .popup-buttons .button:last-child {
+	border-bottom-right-radius: 6px !important;
+	border-right: 0px;
+}
+
+.custom_popup .popup-buttons .button:after {
+	top: 0px !important;
+	right: 0px !important;
+	left: 0px !important;
+	bottom: 0px !important;
+	content: ' ';
+}
+/* custom popup end*/
+
+/* btn css begin*/
+.button.button-confirm {
+	font-size: 0.14rem;
+	border-color: transparent;
+	background-color: #fff;
+	color: #228ed5;
+}
+
+.button.button-confirm:hover {
+	color: #228ed5;
+	text-decoration: none;
+}
+
+.button.button-confirm.active, .button.button-confirm.activated {
+	color: #fff;
+	background-color: #0075bf;
+}
+
+.button.button-confirm.button-clear {
+	border-color: transparent;
+	background: none;
+	box-shadow: none;
+	color: #387ef5;
+}
+
+.button.button-confirm.button-icon {
+	border-color: transparent;
+	background: none;
+}
+
+.button.button-confirm.button-outline {
+	border-color: #387ef5;
+	background: transparent;
+	color: #387ef5;
+}
+
+.button.button-cancel {
+	font-size: 0.14rem;
+	border-color: transparent;
+	background-color: #fff;
+	color: #999999;
+}
+
+.button.button-cancel:hover {
+	color: #999999;
+	text-decoration: none;
+}
+
+.button.button-cancel.active, .button.button-cancel.activated {
+	color: #fff;
+	background-color: #0075bf;
+}
+
+.button.button-cancel.button-clear {
+	border-color: transparent;
+	background: none;
+	box-shadow: none;
+	color: #387ef5;
+}
+
+.button.button-cancel.button-icon {
+	border-color: transparent;
+	background: none;
+}
+
+.button.button-cancel.button-outline {
+	border-color: #387ef5;
+	background: transparent;
+	color: #387ef5;
+}
+
+/* btn css end*/
+
